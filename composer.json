@@ -1,38 +1,43 @@
 {
-    "name": "yii2mod/yii2-selectize",
-    "description": "selectize.js wrapper for yii2",
-    "type": "yii2-extension",
-    "keywords": [
-        "yii2 selectize",
-        "yii2 selectize.js",
-        "yii2 select",
-        "yii2 tagging"
-    ],
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Igor Chepurnoy",
-            "email": "igorzfort@gmail.com"
-        }
-    ],
-    "require": {
-        "php": ">=5.6",
-        "yiisoft/yii2": "*",
-        "yiisoft/yii2-jui": "~2.0.0",
-        "bower-asset/selectize.js": "*"
-    },
-    "require-dev": {
-        "friendsofphp/php-cs-fixer": "~2.0"
-    },
-    "autoload": {
-        "psr-4": {
-            "yii2mod\\selectize\\": ""
-        }
-    },
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://asset-packagist.org"
-        }
-    ]
+	"name": "ommu/yii2-selectize",
+	"description": "selectize.js wrapper for yii2",
+	"type": "yii2-extension",
+	"keywords": [
+		"yii2 selectize",
+		"yii2 selectize.js",
+		"yii2 select",
+		"yii2 tagging"
+	],
+	"license": "MIT",
+	"homepage": "https://github.com/ommu/yii2-selectize",
+	"support": {
+		"issues": "https://github.com/ommu/yii2-selectize/issues",
+		"wiki": "https://github.com/ommu/yii2-selectize/wiki",
+		"source": "https://github.com/ommu/yii2-selectize"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ommu/yii2-selectize.git"
+	},
+	"authors": [
+		{
+			"name": "Igor Chepurnoy",
+			"email": "igorzfort@gmail.com"
+		},
+		{
+			"name": "Putra Sudaryanto",
+			"email": "putra@sudaryanto.id",
+			"homepage": "https://putra.sudaryanto.id",
+			"role": "Modifier"
+		}
+	],
+	"require": {
+		"php": ">=5.6",
+		"yii2mod/yii2-selectize": "*"
+	},
+	"autoload": {
+		"psr-4": {
+			"ommu\\selectize\\": ""
+		}
+	}
 }
