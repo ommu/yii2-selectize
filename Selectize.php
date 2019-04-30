@@ -16,10 +16,24 @@
 
 namespace ommu\selectize;
 
+use yii\helpers\Url;
+use yii\web\JsExpression;
+use yii\helpers\Json;
 use yii2mod\selectize\SelectizeAsset;
+use yii\helpers\Inflector;
 
 class Selectize extends \yii2mod\selectize\Selectize
 {
+	/**
+	 * {@inheritdoc}
+	 */
+	public $cascade = false;
+
+	/**
+	 * @var string the parameter name
+	 */
+	public $queryParam = 'query'; 
+
 	/**
 	 * Register client assets
 	 */
@@ -27,7 +41,35 @@ class Selectize extends \yii2mod\selectize\Selectize
 	{
 		$view = $this->getView();
 		SelectizeAsset::register($view);
-		$js = '$("#' . $this->getInputId() . '").selectize(' . $this->getPluginOptions() . ');';
+		if($this->cascade) {
+			$inputIdVar = Inflector::underscore(Inflector::id2camel($this->getInputId()));
+			$jsVar = "var $inputIdVar, f_$inputIdVar;";
+			$js = "f_$inputIdVar = $('#".$this->getInputId()."').selectize(".$this->getPluginOptions().");\n$inputIdVar = f_".$inputIdVar."[0].selectize;";
+			$view->registerJs($jsVar, $view::POS_HEAD);
+		} else
+			$js = '$("#' . $this->getInputId() . '").selectize(' . $this->getPluginOptions() . ');';
 		$view->registerJs($js, $view::POS_END);
+	}
+
+	/**
+	 * Get plugin options in the json format
+	 *
+	 * @return string
+	 */
+	public function getPluginOptions()
+	{
+		if ($this->url !== null) {
+			$url = Url::to($this->url);
+			$queryParam = $this->queryParam;
+			$this->pluginOptions['load'] = new JsExpression("
+				function (query, callback) {
+					if (!query.length) return callback();
+					$.getJSON('$url', { $queryParam: encodeURIComponent(query) }, function (data) { callback(data); })
+					.fail(function () { callback(); });
+				}
+			");
+		}
+
+		return Json::encode($this->pluginOptions);
 	}
 }
