@@ -3,10 +3,14 @@
 	"description": "selectize.js wrapper for yii2",
 	"type": "yii2-extension",
 	"keywords": [
+		"extension",
 		"yii2 selectize",
 		"yii2 selectize.js",
 		"yii2 select",
-		"yii2 tagging"
+		"yii2 tagging",
+		"ommu",
+		"ommu-platform",
+		"yii2"
 	],
 	"license": "MIT",
 	"homepage": "https://github.com/ommu/yii2-selectize",
@@ -27,7 +31,7 @@
 		{
 			"name": "Putra Sudaryanto",
 			"email": "putra@sudaryanto.id",
-			"homepage": "https://putra.sudaryanto.id",
+			"homepage": "https://sudaryanto.id",
 			"role": "Modifier"
 		}
 	],
