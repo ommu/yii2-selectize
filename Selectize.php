@@ -6,9 +6,9 @@
  * For more details and usage information on Selectize, see the [guide article on Selectize](guide:selectize).
  * @see yii2mod\selectize\Selectize
  * 
- * @author Putra Sudaryanto <putra@ommu.co>
+ * @author Putra Sudaryanto <putra@ommu.id>
  * @contact (+62)856-299-4114
- * @copyright Copyright (c) 2019 OMMU (www.ommu.co)
+ * @copyright Copyright (c) 2019 OMMU (www.ommu.id)
  * @created date 29 April 2019, 12:28 WIB
  * @link https://github.com/ommu/yii2-selectize
  *
