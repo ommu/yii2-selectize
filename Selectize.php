@@ -19,7 +19,7 @@ namespace ommu\selectize;
 use yii\helpers\Url;
 use yii\web\JsExpression;
 use yii\helpers\Json;
-use yii2mod\selectize\SelectizeAsset;
+use ommu\selectize\SelectizeAsset;
 use yii\helpers\Inflector;
 
 class Selectize extends \yii2mod\selectize\Selectize
