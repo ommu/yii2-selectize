@@ -7,7 +7,7 @@
  * @see yii2mod\selectize\Selectize
  * 
  * @author Putra Sudaryanto <putra@ommu.id>
- * @contact (+62)856-299-4114
+ * @contact (+62)811-2540-432
  * @copyright Copyright (c) 2023 OMMU (www.ommu.id)
  * @created date 27 April 2023, 04:44 WIB
  * @link https://github.com/ommu/yii2-selectize
