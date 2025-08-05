@@ -19,13 +19,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist yii2mod/yii2-selectize "*"
+php composer.phar require --prefer-dist ommu/yii2-selectize "dev-master"
 ```
 
 or add
 
 ```json
-"yii2mod/yii2-selectize": "*"
+"ommu/yii2-selectize": "dev-master"
 ```
 
 to the require section of your composer.json.
